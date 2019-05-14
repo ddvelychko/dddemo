@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+<body>
+    <meta charset="UTF-8">
+    <title>Welcome!</title>
+    <h2>{{ title }}</h2>
+    <h2>{{ rounds }}</h2>
+
+<form method='POST' action='/round2'>
+<p>Choose your weapon, please:</p>
+<table>
+    <tr><td><b>Player 1:</b></td><td><select name="player_1" type='TEXT' width='60'>
+        <option value="{{obj[0]}}" selected>{{obj[0]}}</option>
+        {% for obj in obj[1:] %}
+        <option value="{{obj}}">{{obj}}</option>
+        {% endfor %}</select></td></tr></table>
+
+<table>
+    <tr><td><b>Player 2:</b></td><td><select name="player_2">
+        <option value="{{obj[0]}}" selected>{{obj[0]}}</option>
+        {% for obj in obj[1:] %}
+        <option value="{{obj}}">{{obj}}</option>
+        {% endfor %}</select></tr></table>
+
+
+<p>When you're ready, click this button:</p>
+<p><input value='Fight!' type='SUBMIT'></p>
+</form>
+    <hr>
+    <p> <b>RULES:</b></p>
+        When it comes time to play, you and your opponent will choose from one of the three objects — <br>
+    either rock, paper or scissors. Then will be named a winner based on which objects you played. <br>
+    Every game will be different,so stay alert! Three rounds will be played.<br>
+    <p><b>Determine the winner. </b></p>
+    <p>After you’ve both played an object, look to see who’s won this round. Each object wins against <br>
+       one shape and loses to another. For instance, rock “crushes” scissors but is “covered” by paper, <br>
+       paper “covers” rock but is “cut” by scissors, and scissors is “crushed” by rock but “cuts” paper. <br>
+       The player who picks the stronger of the two objects is the winner of the round. If both players <br>
+       throw the same object, it’s a tie.<br>
+    <p>When three games are played, it will be calculated a result.</p>
+</body>
+</html>

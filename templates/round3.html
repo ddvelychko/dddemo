@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Round 3</title>
+
+    <h2>Round 3</h2>
+
+<form method='POST' action='/results'>
+<table>
+<table>
+    <tr><td><b>Player 1:</b></td><td><select name="player_1" type='TEXT' width='60'>
+        <option value="{{obj[0]}}" selected>{{obj[0]}}</option>
+        {% for obj in obj[1:] %}
+        <option value="{{obj}}">{{obj}}</option>
+        {% endfor %}</select></td></tr></table>
+
+<table>
+    <tr><td><b>Player 2:</b></td><td><select name="player_2">
+        <option value="{{obj[0]}}" selected>{{obj[0]}}</option>
+        {% for obj in obj[1:] %}
+        <option value="{{obj}}">{{obj}}</option>
+        {% endfor %}</select></tr></table>
+<p>When you're ready, click this button:</p>
+<p><input value='Results!' type='SUBMIT'></p>
+
+</form>
+<body>
+
+</body>
+</html>
